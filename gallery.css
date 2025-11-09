@@ -1,0 +1,26 @@
+/* гелерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery img {
+    width: 50%;
+    max-width: 700px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* уменьшение изображений на телефонах */
+@media (max-width: 600px) {
+    .gallery img {
+        width: 90%;
+    }
+}

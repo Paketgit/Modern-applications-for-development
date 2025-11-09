@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современные приложения для разработки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="buttonAnim.css">
+    <link rel="stylesheet" href="burgerMenu.css">
+    <link rel="stylesheet" href="gallery.css">
+    <script src="logic.js"></script>
+</head>
+<body>
+    <header class="header">
+        <span class="site-title">Современные приложения для разработки</span>
+    </div>
+    
+    <input type="checkbox" id="burger-toggle">
+    <label for="burger-toggle" class="burger">
+        <span></span>
+    </label>
+        <nav class="burger-menu">
+            <a href="#apps">Приложения</a>
+            <a href="#about">О сайте</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#form">Контакты</a>
+        </nav>
+    </header>
+
+    <nav class="nav">
+        <a href="#apps">Приложения</a>
+        <a href="#about">О сайте</a>
+        <a href="#gallery">Галерея</a>
+    </nav>
+
+    <main class="main">
+        
+        <section id="buttons">
+    <h2>Анимированные кнопки</h2>
+    <div class="button-container">
+        <button class="btn slide">Скачать</button>
+        <button class="btn glow">Подробнее</button>
+        <button class="btn outline-slide">Купить</button>
+        <button class="btn diagonal-fill">Связаться</button>
+    </div>
+</section>
+
+        <section id="apps">
+            <h2>Популярные инструменты</h2>
+            <div class="app-grid">
+                <!-- Visual Studio Code -->
+                <div class="app-grid-column">
+                    <div class="app-card vscode" onclick="OnClickButton('vscode')">
+                        <h3>Visual Studio Code</h3>
+                        <p>Лёгкий и быстрый редактор кода с поддержкой расширений.</p>
+                    </div>
+                    <div class="app-card" style="text-align: center;">
+                        <div class="app-grid-column">
+                        <button class="btn slide" onclick="OnClickButton('https://code.visualstudio.com/download')">Скачать</button>
+                        <button class="btn slide" onclick="OnClickButton('vscode')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Visual Studio -->
+                <div class="app-grid-column">
+                    <div class="app-card vs" onclick="OnClickButton('visualstudio')">
+                        <h3>Visual Studio</h3>
+                        <p>Мощная IDE для C#, C++, .NET и многих других технологий.</p>
+                    </div>
+                    <div class="app-card vs" style="text-align: center;">
+                        <div class="app-grid-column">
+                        <button class="btn slide" onclick="OnClickButton('https://visualstudio.microsoft.com/ru/downloads/')">Скачать</button>
+                        <button class="btn slide" onclick="OnClickButton('visualstudio')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub -->
+                <div class="app-grid-column">
+                    <div class="app-card github" onclick="OnClickButton('github')">
+                        <h3>GitHub</h3>
+                        <p>Платформа для совместной разработки и хранения кода.</p>
+                    </div>
+                    <div class="app-card github" style="text-align: center;">
+                        <div class="app-grid-column">
+                        <button class="btn slide" onclick="OnClickButton('https://github.com/')">Скачать</button>
+                        <button class="btn slide" onclick="OnClickButton('github')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Figma -->
+                <div class="app-grid-column">
+                    <div class="app-card figma" onclick="OnClickButton('figma')">
+                        <h3>Figma</h3>
+                        <p>Онлайн-сервис для проектирования интерфейсов и дизайна.</p>
+                    </div>
+                    <div class="app-card figma" style="text-align: center;">
+                        <div class="app-grid-column">
+                        <button class="btn slide" onclick="OnClickButton('https://www.figma.com/')">Скачать</button>
+                        <button class="btn slide" onclick="OnClickButton('figma')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Docker -->
+                <div class="app-grid-column">
+                    <div class="app-card docker" onclick="OnClickButton('docker')">
+                        <h3>Docker</h3>
+                        <p>Инструмент для контейнеризации приложений и DevOps.</p>
+                    </div>
+                    <div class="app-card docker" style="text-align: center;">
+                        <div class="app-grid-column">
+                        <button class="btn slide" onclick="OnClickButton('https://www.docker.com/products/docker-desktop/')">Скачать</button>
+                        <button class="btn slide" onclick="OnClickButton('docker')">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>О сайте</h2>
+            <p>Этот сайт представляет современные инструменты, которые помогают разработчикам писать код, проектировать интерфейсы и работать в команде.</p>
+        </section> 
+
+        <section id="gallery">
+            <h2>Галерея</h2>
+            <div class="gallery">
+                <img src="images/code1.png" alt="VS Code">
+                <img src="images/code2.png" alt="Visual Studio">
+                <img src="images/docker.png" alt="Docker">
+                <img src="images/figma.png" alt="Figma">
+                <img src="images/github.png" alt="GitHub">
+            </div>
+
+        <section id="cards">
+            <h2>Интерактивные карточки</h2>
+            <div class="card-container">
+                <div class="card one">
+                    <h3>Frontend</h3>
+                    <p>Создание адаптивных интерфейсов с HTML, CSS и JS.</p>
+                </div>
+                <div class="card two">
+                    <h3>Backend</h3>
+                    <p>Разработка серверной логики и баз данных.</p>
+                </div>
+                <div class="card three">
+                    <h3>UI/UX</h3>
+                    <p>Проектирование удобных и красивых интерфейсов.</p>
+                </div>
+            </div>
+        <section id="video-section">
+        <div class="video-wrapper">
+            <video src="videos/button8.mp4" controls></video>
+            <div class="video-info", style="text-align: center;">
+            <span>Подпись к видео</span>
+            </div>
+        </div>
+        </section>
+
+
+        <section id="form">
+            <h2>Форма обратной связи</h2>
+            <form method="post" class="feedback-form">
+                <fieldset>
+                    <legend>Личные данные</legend>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="имя" min="2" max="40"><br><br>
+
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__"><br><br>
+
+                    <label for="email">Почта</label>
+                    <input type="email" id="email" name="email" placeholder="Введите email" required><br><br>
+
+                    <label for="pass">Пароль:</label>
+                    <input type="password" id="pass" name="pass" required min="6"><br><br>
+
+                    <label for="date">Дата и время:</label>
+                    <input type="datetime-local" id="date" name="date"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Дополнительно</legend>
+                    <label><input type="checkbox" name="subscribe" checked required> Согласие на обработку личных данных</label><br>
+                    <label><input type="radio" name="gender" value="male" required> Мужской</label>
+                    <label><input type="radio" name="gender" value="female" required> Женский</label><br><br>
+
+                    <label for="file">Прикрепить файл:</label>
+                    <input type="file" id="file" name="file"><br><br>
+
+                    <label for="topic">Тема обращения:</label>
+                    <select id="topic" name="topic" size="3" multiple required>
+                        <option value="help">Поддержка</option>
+                        <option value="feedback">Отзыв</option>
+                        <option value="job">Вакансии</option>
+                    </select>
+                </fieldset>
+
+                <label for="message">Сообщение:</label><br>
+                <textarea id="message" name="message" cols="40" rows="5" placeholder="Введите сообщение..." maxlength="250" minlength="10" required></textarea><br><br>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Современные приложения для разработки</p>
+        <p>Разработчик: И.М.С 
+            <address>г. Москва, 
+                <a href="mailto:example@mail.com">example@mail.com</a>, 
+                <a href="tel:+79991212367">+7 999 121-23-67</a>
+            </address>
+        </p>
+    </footer>
+</body>
+</html>

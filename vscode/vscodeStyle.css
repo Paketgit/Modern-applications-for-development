@@ -1,0 +1,150 @@
+/* Сброс стандартных стилей браузера */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: Tahoma, Verdana, sans-serif;
+  background: #1e1e2a;
+  color: #d4d4dc;
+  font-size: 14px;
+}
+
+/* Топ-бар */
+.titlebar {
+  height: 34px;
+  background: #21252b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.title-left .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.title-center {
+  font-weight: 600;
+  color: #d4d4dc;
+}
+
+/* Контейнер приложения */
+.app {
+  display: flex;
+  height: 98%;
+}
+
+/* Боковая панель */
+.sidebar {
+  width: 200px;
+  background: #21252b;
+  border-right: 1px solid rgba(255,255,255,0.03);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar-top {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+}
+
+.explorer {
+  margin-top: 6px;
+}
+
+.folder {
+    color: #007acc;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.files {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.file {
+    padding: 6px 8px;
+    border-radius: 3px;
+    color: #9aa0a6;
+    cursor: pointer;
+}
+
+/* Активный файл */
+.file.active {
+    background: rgba(0,122,204,0.15);
+    color: #d4d4dc;
+}
+
+/* Редактор */
+.editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #2d2d3b;
+}
+
+.editor-top {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.tab {
+    background: rgba(255,255,255,0.02);
+    padding: 6px 10px;
+    border-radius: 3px;
+    color: #d4d4dc;
+    font-weight: 600;
+}
+
+.code {
+  padding: 12px;
+  overflow: auto;
+  flex: 1;
+  color: #d4d4dc;
+}
+
+/* Простой стиль для блока кода */
+pre {
+  background: transparent;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+/* Нижняя строка состояния */
+.statusbar {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1), transparent);
+  border-top: 1px solid rgba(255,255,255,0.02);
+  font-size: 12px;
+  color: #9aa0a6;
+}

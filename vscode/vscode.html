@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VSCode</title>
+    <link rel="stylesheet" href="vscodeStyle.css" />
+    <script src="logicvscode.js" defer></script>
+  </head>
+  <body>
+    <!-- топ бар -->
+    <header class="titlebar">
+      <div class="title-left">
+        <button class="dot red" onclick="returnToMain()"></button>
+        <button class="dot yellow" onclick="restorePage()"></button>
+        <button class="dot green"></button>
+      </div>
+      <div class="title-center">VSCode</div>
+      <div class="title-right">Файл Правка  Вид</div>
+    </header>
+
+    <div class="app">
+      <!-- боковая панель -->
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="icon">📁</div>
+          <div class="icon">🔍</div>
+          <div class="icon">⚙️</div>
+        </div>
+
+        <div class="explorer">
+          <div class="folder">📂 Проект</div>
+          <ul class="files">
+            <li data-file="index.html" class="file" onclick="openFile('index.html')">index.html</li>
+            <li data-file="styles.css" class="file" onclick="openFile('styles.css')">styles.css</li>
+            <li data-file="script.js" class="file" onclick="openFile('script.js')">script.js</li>
+            <li data-file="content" class="file" onclick="openFile('content')">content</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="editor">
+        <div class="editor-top">
+          <div class="tab">index.html</div>
+        </div>
+
+        <div id="code" class="code">
+          <pre><code id="code-content">-- Выберите файл в боковой панели --</code></pre>
+        </div>
+
+        <div class="statusbar">
+          <div>Ln 1, Col 1</div>
+          <div>UTF-8</div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
