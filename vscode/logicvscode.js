@@ -1,7 +1,3 @@
-// Очень простой JS для переключения файлов в "редакторе"
-// Я упростил намеренно, чтобы было похоже на работу ученика.
-// Файлы хранятся в объекте files — как будто это мини-файловая система.
-
 const files = {
   "index.html": `<pre class="code-highlight">
 &lt;!doctype html&gt;
@@ -54,11 +50,11 @@ Visual Studio Code основан на Electron и реализуется чер
     </button>
     <h2>Полезные сочетания клавиш</h2>
     <pre class="code-highlight">
-    Ctrl + P          — открыть файл
-    trl + Shift + P  — командная палитра
-    Ctrl + '          — встроенный терминал
-    Ctrl + F          — поиск
-    Ctrl + K Ctrl + S — настройки клавиш
+Ctrl + P          — открыть файл
+trl + Shift + P  — командная палитра
+Ctrl + '          — встроенный терминал
+Ctrl + F          — поиск
+Ctrl + K Ctrl + S — настройки клавиш
 </pre>
     <h2>Пример настройки</h2>
     <pre class="code-highlight">
@@ -66,7 +62,7 @@ Visual Studio Code основан на Electron и реализуется чер
   "editor.tabSize": 2,
   "editor.formatOnSave": true
 }
-  </pre>
+</pre>
     <footer>
       вставка в js 
     </footer>

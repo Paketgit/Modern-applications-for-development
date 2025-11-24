@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Studio</title>
+    <link rel="stylesheet" href="visualstudioStyle.css">
+</head>
+<body>
+    <div class="titlebar">
+        <div class="title-left">
+            <button class="menu-toggle">☰</button>
+            <span class="menu-item">Файл</span>
+            <span class="menu-item">Правка</span>
+            <span class="menu-item">Вид</span>
+            <span class="menu-item">Проект</span>
+            <span class="menu-item">Сборка</span>
+            <span class="menu-item">Отладка</span>
+            <span class="menu-item">Сервис</span>
+            <span class="menu-item">Окно</span>
+            <span class="menu-item">Справка</span>
+        </div>
+        <div class="title-center">Visual Studio - Microsoft</div>
+        <div class="title-right">Готово</div>
+    </div>
+
+    <!-- Основной контейнер -->
+    <div class="app-container">
+        <!-- Боковая панель -->
+        <div class="sidebar">
+            <div class="sidebar-icon active" data-panel="explorer">📁</div>
+            <div class="sidebar-icon" data-panel="search">🔍</div>
+            <div class="sidebar-icon" data-panel="settings">⚙️</div>
+            <div class="sidebar-icon" data-panel="debug">🔧</div>
+            <div class="sidebar-icon" data-panel="extensions">📦</div>
+        </div>
+
+        <!-- Обозреватель решений -->
+        <div class="solution-explorer active-panel">
+            <div class="explorer-header">
+                <span>Обозреватель решений</span>
+                <span class="panel-close">×</span>
+            </div>
+            <div class="explorer-content">
+                <div class="folder expanded">Решение "MyApp" (1 проект)</div>
+                <div class="folder expanded">📁 MyApp</div>
+                <div class="file" data-file="startup">📄 Startup.cs</div>
+                <div class="file" data-file="appsettings">📄 appsettings.json</div>
+                <div class="file" data-file="vs-info">📄 Visual Studio Info</div>
+                <div class="folder">📁 Controllers</div>
+                <div class="folder">📁 Models</div>
+                <div class="folder">📁 Views</div>
+                <div class="folder">📁 wwwroot</div>
+            </div>
+        </div>
+
+        <!-- Главная область -->
+        <div class="main-area">
+            <!-- Вкладки -->
+            <div class="tabs">
+                <div class="tab" data-tab="startup">Startup.cs<span class="tab-close">×</span></div>
+                <div class="tab" data-tab="vs-info">Visual Studio<span class="tab-close">×</span></div>
+                <div class="tab" data-tab="versions">Версии VS<span class="tab-close">×</span></div>
+            </div>
+
+            <!-- Редактор -->
+            <div class="editor">
+
+                <div id="tab-content-startup" class="tab-content">
+                </div>
+
+                <!-- Обновленное содержимое вкладки Visual Studio -->
+                <div id="tab-content-vs-info" class="tab-content">
+                    <div class="content">
+                        <h1>Microsoft Visual Studio</h1>
+                        <div class="subtitle">Полнофункциональная интегрированная среда разработки (IDE)</div>
+                        
+                        <div class="info-card">
+                            <h2>О Visual Studio</h2>
+                            <p><strong>Visual Studio</strong> — это мощная IDE от Microsoft, предназначенная для разработки компьютерных программ, веб-сайтов, веб-приложений и мобильных приложений. Первая версия была выпущена в 1997 году, и с тех пор среда постоянно развивается.</p>
+                        </div>
+
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h3>Основные возможности</h3>
+                                <ul class="feature-list">
+                                    <li><strong>IntelliSense</strong> — умное автодополнение кода</li>
+                                    <li><strong>Продвинутый отладчик</strong> с точками останова и пошаговым выполнением</li>
+                                    <li><strong>Интегрированная система контроля версий</strong> (Git, TFVC)</li>
+                                    <li><strong>Профилировщик производительности</strong> и диагностические инструменты</li>
+                                    <li><strong>Визуальный дизайнер</strong> для UI (Windows Forms, WPF, XAML)</li>
+                                    <li><strong>Интеграция с Azure</strong> для облачной разработки</li>
+                                    <li><strong>Тестирование</strong> — модульные тесты, нагрузочное тестирование</li>
+                                    <li><strong>Extensibility</strong> — богатая экосистема расширений</li>
+                                </ul>
+                            </div>
+
+                            <div class="info-item">
+                                <h3>💻 Поддерживаемые языки</h3>
+                                <div class="languages-grid">
+                                    <span class="language-tag">C#</span>
+                                    <span class="language-tag">VB.NET</span>
+                                    <span class="language-tag">F#</span>
+                                    <span class="language-tag">C++</span>
+                                    <span class="language-tag">Python</span>
+                                    <span class="language-tag">JavaScript</span>
+                                    <span class="language-tag">TypeScript</span>
+                                    <span class="language-tag">HTML/CSS</span>
+                                    <span class="language-tag">SQL</span>
+                                    <span class="language-tag">XML</span>
+                                    <span class="language-tag">JSON</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <h3>Типы проектов</h3>
+                            <div class="project-types">
+                                <div class="project-type">
+                                    <h4>Desktop Applications</h4>
+                                    <p>Windows Forms, WPF, UWP, Console Apps</p>
+                                </div>
+                                <div class="project-type">
+                                    <h4>Web Development</h4>
+                                    <p>ASP.NET Core, MVC, Web API, Blazor</p>
+                                </div>
+                                <div class="project-type">
+                                    <h4>Mobile Development</h4>
+                                    <p>Xamarin, .NET MAUI</p>
+                                </div>
+                                <div class="project-type">
+                                    <h4>Cloud & Microservices</h4>
+                                    <p>Azure Functions, Docker, Kubernetes</p>
+                                </div>
+                                <div class="project-type">
+                                    <h4>Game Development</h4>
+                                    <p>Unity, DirectX, Game Engines</p>
+                                </div>
+                                <div class="project-type">
+                                    <h4>Database & AI</h4>
+                                    <p>SQL Server, ML.NET, AI Tools</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="architecture-section">
+                            <h3>Архитектура и компоненты</h3>
+                            <div class="architecture-grid">
+                                <div class="arch-component">
+                                    <h4>MSBuild</h4>
+                                    <p>Система сборки проектов</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h4>Roslyn</h4>
+                                    <p>.NET Compiler Platform</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h4>Debugger Engine</h4>
+                                    <p>Отладка managed и native кода</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h4>Visual Studio SDK</h4>
+                                    <p>Platform для расширений</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h4>Test Platform</h4>
+                                    <p>Инфраструктура тестирования</p>
+                                </div>
+                                <div class="arch-component">
+                                    <h4>Language Server</h4>
+                                    <p>Поддержка языков программирования</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button class="btn secondary" onclick="switchToTab('versions')">История версий</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Новая вкладка с версиями Visual Studio -->
+                <div id="tab-content-versions" class="tab-content">
+                    <div class="content">
+                        <h1>История версий Visual Studio</h1>
+                        
+                        <div class="versions-timeline">
+                            <div class="version-item">
+                                <div class="version-year">2022</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2022</h3>
+                                    <ul>
+                                        <li>64-битная версия IDE</li>
+                                        <li>Улучшенная производительность</li>
+                                        <li>Hot Reload для .NET и C++</li>
+                                        <li>Улучшенный IntelliCode</li>
+                                        <li>Git First experience</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="version-item">
+                                <div class="version-year">2019</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2019</h3>
+                                    <ul>
+                                        <li>Live Share для совместной работы</li>
+                                        <li>IntelliCode с AI-помощником</li>
+                                        <li>Улучшенная отладка</li>
+                                        <li>.NET Core 3.1 поддержка</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="version-item">
+                                <div class="version-year">2017</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2017</h3>
+                                    <ul>
+                                        <li>Улучшенная производительность</li>
+                                        <li>Live Unit Testing</li>
+                                        <li>.NET Core и Docker поддержка</li>
+                                        <li>Улучшения для мобильной разработки</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="version-item">
+                                <div class="version-year">2015</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2015</h3>
+                                    <ul>
+                                        <li>Roslyn .NET Compiler Platform</li>
+                                        <li>ASP.NET 5 (позже .NET Core)</li>
+                                        <li>Universal Windows Platform</li>
+                                        <li>TypeScript 1.5 поддержка</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="version-item">
+                                <div class="version-year">2012</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2012</h3>
+                                    <ul>
+                                        <li>Windows 8 и Windows Phone 8</li>
+                                        <li>ASP.NET MVC 4</li>
+                                        <li>Async/await для C# и VB</li>
+                                        <li>Улучшения для SharePoint</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="version-item">
+                                <div class="version-year">2010</div>
+                                <div class="version-info">
+                                    <h3>Visual Studio 2010</h3>
+                                    <ul>
+                                        <li>WPF-based IDE</li>
+                                        <li>F# язык программирования</li>
+                                        <li>ASP.NET MVC 2</li>
+                                        <li>Поддержка .NET Framework 4</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="editions-comparison">
+                            <h3>Сравнение редакций</h3>
+                            <table class="editions-table">
+                                <thead>
+                                    <tr>
+                                        <th>Функция</th>
+                                        <th>Community</th>
+                                        <th>Professional</th>
+                                        <th>Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Цена</td>
+                                        <td>Бесплатно</td>
+                                        <td>Платная</td>
+                                        <td>Платная</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Лицензия</td>
+                                        <td>Индивидуальные разработчики, OSS, учебные заведения</td>
+                                        <td>Профессиональные разработчики</td>
+                                        <td>Корпоративные команды</td>
+                                    </tr>
+                                    <tr>
+                                        <td>CodeLens</td>
+                                        <td>✅</td>
+                                        <td>✅</td>
+                                        <td>✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Профилировщик производительности</td>
+                                        <td>✅</td>
+                                        <td>✅</td>
+                                        <td>✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Live Unit Testing</td>
+                                        <td>❌</td>
+                                        <td>❌</td>
+                                        <td>✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td>IntelliTrace</td>
+                                        <td>❌</td>
+                                        <td>❌</td>
+                                        <td>✅</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Code Clone</td>
+                                        <td>❌</td>
+                                        <td>❌</td>
+                                        <td>✅</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-content-appsettings" class="tab-content">
+                </div>
+            </div>
+
+            <!-- Нижняя панель -->
+            <div class="statusbar">
+                <div>Готово</div>
+                <div>UTF-8</div>
+                <div>Windows (CRLF)</div>
+                <div>C#</div>
+                <div>Ln 1, Col 1</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="visualstudio.js"></script>
+</body>
+</html>
