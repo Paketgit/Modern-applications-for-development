@@ -3,103 +3,40 @@
 // Файлы хранятся в объекте files — как будто это мини-файловая система.
 
 const files = {
-  "index.html": `<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>index.html</title>
-  </head>
-  <body>
-    <h1>Привет из index.html</h1>
-    <!-- комментарий -->
-  </body>
-</html>`,
+  "index.html": `<pre class="code-highlight">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;index.html&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Привет из index.html&lt;/h1&gt;
+    &lt;!-- комментарий --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>`,
 
-  "styles.css": `/* styles.css */
+  "styles.css": `
+  <pre class="code-highlight">
+  /* styles.css */
 body {
   background: #fff;
   color: #000;
 }
-
+</pre>
 `,
 
-  "script.js": `// script.js
+  "script.js": `
+  <pre class="code-highlight">
+  // script.js
 console.log("Привет из script.js");
 function hello() {
   alert("Hello!");
-}`,
-    "content": `<style>
-        * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    } 
-
-    .page {
-      max-width: 80%;
-      margin: auto;
-      background: #2e2e3a;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      padding: 20px;
-    }
-
-    h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    }
-      color: #0b63d6;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    ul, ol {
-      margin-left: 20px;
-    }
-
-    .note {
-      background: #424252;
-      border-left: 4px solid #0b63d6;
-      padding: 10px;
-      margin: 10px 0;
-    }
-
-    code {
-      background: #0f1724;
-      color: #e6eef8;
-      padding: 2px 5px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
-    pre {
-      background: #0f1724;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    a.button {
-      display: inline-block;
-      background: #0b63d6;
-      color: white;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
-
-    footer {
-      margin-top: 20px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <h1>Visual Studio Code</h1>Visual Studio Code (VS Code) — текстовый редактор, разработанный Microsoft для Windows, Linux и macOS. Позиционируется как «лёгкий» редактор кода для кроссплатформенной разработки веб- и облачных приложений. Включает в себя отладчик, инструменты для работы с Git, подсветку синтаксиса, IntelliSense и средства для рефакторинга. Имеет широкие возможности для кастомизации: пользовательские темы, сочетания клавиш и файлы конфигурации. Распространяется бесплатно, разрабатывается как программное обеспечение с открытым исходным кодом, но готовые сборки распространяются под проприетарной лицензией.
+}</pre>`,
+    "content": `
+    <h1>
+    Visual Studio Code</h1>Visual Studio Code (VS Code) — текстовый редактор, разработанный Microsoft для Windows, Linux и macOS. Позиционируется как «лёгкий» редактор кода для кроссплатформенной разработки веб- и облачных приложений. Включает в себя отладчик, инструменты для работы с Git, подсветку синтаксиса, IntelliSense и средства для рефакторинга. Имеет широкие возможности для кастомизации: пользовательские темы, сочетания клавиш и файлы конфигурации. Распространяется бесплатно, разрабатывается как программное обеспечение с открытым исходным кодом, но готовые сборки распространяются под проприетарной лицензией.
 Visual Studio Code основан на Electron и реализуется через веб-редактор Monaco, разработанный для Visual Studio Online.<div class="note">Подходит для работы с HTML, CSS, JavaScript, Python, C++, Java и многими другими языками.</div>
     <h2>Основные возможности</h2><ul>
       <li>Подсветка синтаксиса и автодополнение.</li>
@@ -112,24 +49,24 @@ Visual Studio Code основан на Electron и реализуется чер
       <li>Установи и открой программу.</li>
       <li>Открой папку с проектом: <code>Файл → Открыть папку</code>.</li>
       <li>Добавь расширения через меню <code>Расширения</code>.</li>
-    </ol><a class="button" href="https://code.visualstudio.com">
+    </ol><button class="btn slide" href="https://code.visualstudio.com">
 Официальный сайт VS Code
-    </a>
-
+    </button>
     <h2>Полезные сочетания клавиш</h2>
-    <pre>
-Ctrl + P          — открыть файл
-Ctrl + Shift + P  — командная палитра
-Ctrl + '          — встроенный терминал
-Ctrl + F          — поиск
-Ctrl + K Ctrl + S — настройки клавиш
-    </pre>
+    <pre class="code-highlight">
+    Ctrl + P          — открыть файл
+    trl + Shift + P  — командная палитра
+    Ctrl + '          — встроенный терминал
+    Ctrl + F          — поиск
+    Ctrl + K Ctrl + S — настройки клавиш
+</pre>
     <h2>Пример настройки</h2>
-    <pre>
+    <pre class="code-highlight">
 {
   "editor.tabSize": 2,
   "editor.formatOnSave": true
-}</pre>
+}
+  </pre>
     <footer>
       вставка в js 
     </footer>
@@ -148,14 +85,9 @@ function openFile(name) {
         tab.textContent = name;
         return;
     }
-    if (name === 'content'){
-        codeContent.innerHTML = files[name];
-        tab.textContent = name;
-    }
-    else{
-        codeContent.textContent = files[name];
-        tab.textContent = name;
-    }
+
+    codeContent.innerHTML = files[name];
+    tab.textContent = name;
 
     fileEls.forEach(el => {
         if (el.getAttribute('data-file') === name) {
