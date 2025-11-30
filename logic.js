@@ -9,6 +9,9 @@ function OnClickButton(el){
         case "figma":
             location = './figma/figma.html'
             break
+        case "docker":
+            location = './docker/docker.html'
+            break
         default:
             open(el, '_blank').focus()
             break

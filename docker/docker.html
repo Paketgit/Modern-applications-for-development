@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker</title>
+    <link rel="stylesheet" href="dockerStyle.css">
+</head>
+<body>
+    <main>
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <div class="logo-icon">🐳</div>
+                        <div class="logo-text">Docker</div>
+                    </div>
+                    <input type="checkbox" id="menuToggle" class="menu-toggle">
+                    <label for="menuToggle" class="menu-button">
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                        <span class="menu-line"></span>
+                    </label>
+                    <nav class="nav">
+                        <a href="#about">О Docker</a>
+                        <a href="#features">Возможности</a>
+                        <a href="#workflow">Рабочий процесс</a>
+                        <a href="#start">Начать</a>
+                        <a href="../index.html">Основной сайт</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="container">
+                <h1>Контейнеризация приложений с Docker</h1>
+                <p>Современный подход к разработке, доставке и запуску приложений в изолированных средах. Упростите процесс развертывания и масштабирования ваших приложений.</p>
+                <div class="btn-container">
+                    <a href="#start" class="btn">Начать работу с Docker</a>
+                    <a href="../index.html" class="btn btn-secondary">Перейти на основной сайт</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title">Что такое Docker?</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>Контейнеризация приложений</h3>
+                        <p>Docker — это платформа для разработки, доставки и запуску приложений в контейнерах. Контейнеры позволяют упаковать приложение со всеми его зависимостями в стандартизированный блок программного обеспечения.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Преимущества контейнеризации</h3>
+                        <p>Изоляция приложений, переносимость между системами, быстрое развертывание, эффективное использование ресурсов и согласованность сред разработки, тестирования и производства.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💻</div>
+                        <h3>Docker в разработке</h3>
+                        <p>Используется для создания микросервисных архитектур, CI/CD пайплайнов, развертывания в облачных средах и обеспечения идентичности сред на всех этапах жизненного цикла приложения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section-title">Ключевые компоненты Docker</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚙️</div>
+                        <h3>Docker Engine</h3>
+                        <p>Основной компонент, который создает и запускает контейнеры. Состоит из демона, REST API и CLI интерфейса.</p>
+                        <div class="code-block">docker run -d nginx:latest</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🖼️</div>
+                        <h3>Docker Images</h3>
+                        <p>Шаблоны только для чтения, используемые для создания контейнеров. Содержат приложение и все необходимые зависимости.</p>
+                        <div class="code-block">docker build -t myapp .</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>Docker Compose</h3>
+                        <p>Инструмент для определения и запуска многоконтейнерных приложений с помощью YAML файлов.</p>
+                        <div class="code-block">docker-compose up -d</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="workflow">
+            <div class="container">
+                <div class="workflow">
+                    <h2 class="section-title">Рабочий процесс разработки</h2>
+                    <div class="workflow-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <h4>Dockerfile</h4>
+                            <p>Создание инструкций для сборки образа приложения</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <h4>Сборка</h4>
+                            <p>Создание Docker образа из Dockerfile</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <h4>Тестирование</h4>
+                            <p>Запуск контейнера для тестирования приложения</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <h4>Деплой</h4>
+                            <p>Развертывание в продакшн среде</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="start">
+            <div class="container">
+                <div class="quick-start">
+                    <div class="feature-card">
+                        <h3>Быстрый старт</h3>
+                        <p>Начните работу с Docker, установив его на вашу систему и создав первый контейнер:</p>
+                        <div class="code-block">
+                            # Установка Docker<br>
+                            # Зависит от вашей ОС<br><br>
+                            
+                            # Запуск первого контейнера<br>
+                            docker run hello-world<br><br>
+                            
+                            # Создание Dockerfile<br>
+                            FROM node:14<br>
+                            WORKDIR /app<br>
+                            COPY . .<br>
+                            RUN npm install<br>
+                            CMD ["node", "app.js"]
+                        </div>
+                        <a href="https://docs.docker.com/get-docker/" target="_blank" class="btn">Установить Docker</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+                <p>© Курсовая</p>
+        </footer>
+    </main>
+</body>
+</html>
