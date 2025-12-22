@@ -144,3 +144,209 @@ html, body {
     border-radius: 3px;
     padding: 10px;
 }
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  /* Топ-бар остается без изменений для кнопок */
+  .titlebar {
+    height: 44px; /* Немного увеличиваем высоту для удобства нажатия */
+    padding: 0 8px;
+  }
+
+  .title-left {
+    display: flex;
+    gap: 8px;
+  }
+
+  .title-left .dot {
+    width: 18px;
+    height: 18px; /* Немного увеличиваем кнопки для мобильных */
+    margin-right: 0;
+  }
+
+  .title-center {
+    font-size: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .title-right {
+    display: none; /* Скрываем меню на мобильных */
+  }
+
+  /* Контейнер приложения */
+  .app {
+    flex-direction: column;
+    height: calc(100% - 44px); /* Учитываем увеличенную высоту топ-бара */
+  }
+
+  /* Боковая панель */
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    padding: 8px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .sidebar-top {
+    display: none; /* Скрываем иконки на мобильных */
+  }
+
+  .explorer {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .folder {
+    display: none; /* Скрываем заголовок папки на мобильных */
+  }
+
+  .files {
+    display: flex;
+    margin-left: 0;
+    gap: 4px;
+    overflow-x: auto;
+    padding: 4px 0;
+    width: 100%;
+  }
+
+  .file {
+    white-space: nowrap;
+    padding: 8px 10px;
+    font-size: 12px;
+    flex-shrink: 0; /* Запрещаем сжатие элементов */
+  }
+
+  /* Редактор */
+  .editor-top {
+    height: 40px;
+    padding: 0 8px;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .code {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .code-highlight {
+    padding: 8px;
+    font-size: 12px;
+    overflow-x: auto;
+  }
+
+  /* Нижняя строка состояния */
+  .statusbar {
+    height: 28px;
+    font-size: 11px;
+    padding: 0 8px;
+    flex-wrap: wrap;
+  }
+
+  .statusbar div {
+    margin: 2px 0;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  .title-center {
+    font-size: 14px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .files {
+    gap: 2px;
+  }
+
+  .file {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .code {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/* Для горизонтальной ориентации на мобильных */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .app {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 180px;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .explorer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .files {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .file {
+    white-space: normal;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Предотвращаем выделение текста при касании на мобильных */
+.title-left .dot,
+.file,
+.icon {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Улучшаем скролл на мобильных */
+.files::-webkit-scrollbar,
+.code::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.files::-webkit-scrollbar-track,
+.code::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.05);
+}
+
+.files::-webkit-scrollbar-thumb,
+.code::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
